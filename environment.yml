@@ -1,0 +1,21 @@
+name: env
+channels:
+   - conda-forge
+dependencies:
+   - pip
+   - python=3.8  # Specify the Python version you want
+   - ffmpeg=6.0.0  # Install the specific version of ffmpeg if needed
+   - librosa
+   - pip:
+      #- -r file:/app/requirements-python.txt
+      - xgboost==2.0.0
+      - flask==2.2.2
+      - Werkzeug==2.2.2
+      - numpy==1.24.3
+      - pandas==2.0.3
+      - seaborn==0.12.2
+      - tensorFlow
+      - python_speech_features==0.6
+      - pydub==0.25.1
+      # - keras==2.14.0
+   
