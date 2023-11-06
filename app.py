@@ -8,10 +8,6 @@ from io import BytesIO
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello_geek():
-    return '<h1>Hello from Flask & Docker</h2>'
-
 @app.route('/', methods=['POST'])
 def upload_audio():
     print("entrei")
