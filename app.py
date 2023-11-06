@@ -8,9 +8,9 @@ from io import BytesIO
 
 app = Flask(__name__)
 
-
-
-
+@app.route('/')
+def hello_geek():
+    return '<h1>Hello from Flask & Docker</h2>'
 
 @app.route('/upload_audio', methods=['POST'])
 def upload_audio():
@@ -39,14 +39,9 @@ def upload_audio():
         
         return avaliar_modelo(wav_path)
     #"Audio file received and converted to WAV successfully", 200
+        
 
 if __name__ == "__main__":
     host = os.getenv('FLASK_HOST', '0.0.0.0')
     port = os.getenv('FLASK_PORT', '5000')
     app.run(host=host, port=int(port), debug=True)
-
-@app.route('/hello')
-def hello_geek():
-    return '<h1>Hello from Flask & Docker</h2>'
-        
-
