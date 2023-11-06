@@ -23,3 +23,4 @@ SHELL ["conda", "run", "-n", "env", "/bin/bash", "-c"]
 COPY app.py .
 EXPOSE 5000
 ENTRYPOINT ["conda", "run", "-n", "env", "python", "app.py"]
+#CMD[]
