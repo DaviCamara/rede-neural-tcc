@@ -21,4 +21,5 @@ SHELL ["conda", "run", "-n", "env", "/bin/bash", "-c"]
  
 # Python program to run in the container
 COPY app.py .
+EXPOSE 5000
 ENTRYPOINT ["conda", "run", "-n", "env", "python", "app.py"]
