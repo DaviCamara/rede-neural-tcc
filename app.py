@@ -12,8 +12,9 @@ app = Flask(__name__)
 def hello_geek():
     return '<h1>Hello from Flask & Docker</h2>'
 
-@app.route('/upload_audio', methods=['POST'])
+@app.route('/', methods=['POST'])
 def upload_audio():
+    print("entrei")
     if 'audio' not in request.files:
         return "No file part", 400
 
