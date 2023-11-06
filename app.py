@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request
 from MLExport import avaliar_modelo
 import wave 
@@ -41,4 +42,6 @@ def upload_audio():
         
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    host = os.getenv('FLASK_HOST', '127.0.0.1')
+    port = os.getenv('FLASK_PORT', '5000')
+    app.run(host=host, port=int(port), debug=True)
